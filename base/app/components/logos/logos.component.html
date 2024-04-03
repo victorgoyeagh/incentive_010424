@@ -1,0 +1,28 @@
+<section class="strip">
+
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+
+                <div class="row">
+
+         
+                    <div class="col-xs-12 col-md-8 col-md-push-2">
+                        <ul class="row list-inline">
+                            <owl-carousel id="owl" #owlElement [options]="options"
+                                [carouselClasses]="['owl-theme', 'row', 'sliding']" item="images">
+                                <li id="{{ 'item_'+i }}" class="{{ 'img ' + item.className }}"
+                                    *ngFor="let item of logoData;let i = index">
+                                    <img src="{{ 'assets/images/default/logos/' + item.image }}" alt="" />
+                                </li>
+                            </owl-carousel>
+                        </ul>
+                    </div>
+
+                </div>
+            
+
+        </div>
+    </div>
+    </div>
+</section>

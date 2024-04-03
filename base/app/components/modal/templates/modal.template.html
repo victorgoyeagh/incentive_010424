@@ -1,0 +1,62 @@
+<div *ngIf="errorMsg" class="error-message">
+  <h4>An error occurred:</h4>
+  <p>{{ errorMsg }}</p>
+</div>
+
+<div *ngIf="!errorMsg">
+  <modal id="backdrop" #modal [keyboard]="false" [backdrop]="'static'">
+    <div *ngIf="!modalInfoData" class="module-loading">
+      <span></span>
+    </div>
+    <div
+      *ngIf="modalInfoData"
+      id="modalContainer"
+      #modalContainer
+      class="modal-container"
+    >
+      <!--
+            <modal-header>
+                <span class="modal-close" (click)="DismissModal(false, $event)">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+                <h2 class="modal-title" [innerHTML]="modalTitle"></h2>
+            </modal-header>
+            -->
+
+      <div id="scrollcontent" class="scrollcontent" #scrollcontent>
+        <modal-body *ngIf="modalBody">
+          <div class="row scrollpanel" id="scrollpanel" #scrollpanel>
+            <div class="col-sm-12 scrollpanel__container">
+              <div class="row" [ngSwitch]="modalFormType">
+                <div
+                  *ngSwitchCase="ModalFormType.QuoteRequestForm"
+                  class="col-xs-12"
+                >
+                  <app-quote-form #quoteFormControl></app-quote-form>
+                </div>
+
+                <div *ngSwitchCase="ModalFormType.Default" class="col-xs-12">
+                  <p>This is a default modal type</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </modal-body>
+      </div>
+
+      <!--
+        <modal-footer>
+            <input id="modalResponse" name="modalResponse" type="hidden" value="" />
+            <div class="footer-container">
+                <button type="button" class="btn btn-default" (click)="CloseModal(false, $event)">
+                    {{ (modalConfirmText) ? modalConfirmText : 'OK' }}
+                </button>
+                <button type="button" class="btn btn-default btn-brand btn-l" (click)="CloseModal(true, $event)">
+                    {{ (modalCancelText) ? modalCancelText : 'Cancel' }}
+                </button>
+            </div>
+        </modal-footer>
+          -->
+    </div>
+  </modal>
+</div>

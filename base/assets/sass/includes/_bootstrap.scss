@@ -1,0 +1,183 @@
+@import "./variables";
+
+.modal-close {
+  position: absolute;
+  right: 30px;
+  top: 28px;
+  cursor: pointer;
+  i {
+    &::before {
+      color: $color-turquoise;
+      font-size: 25px;
+    }
+  }
+}
+
+i {
+  &.fa {
+    &.fa-angle-right-alt {
+      &:before {
+        content: " \2192";
+      }
+    }
+  }
+}
+
+.btn {
+  i {
+    &:before {
+      margin: 0 4px 0 10px !important;
+    }
+  }
+
+  &.marg-rgt {
+    margin-right: 10px;
+    @media (min-width: $screen-md) {
+      margin-right: 20px;
+    }
+  }
+
+  &.btn-default {
+    padding: 15px 40px 15px 40px;;
+    color: $color--white;
+    border-color: $color-turquoise;
+    background-color: transparent; // $color-turquoise;
+    border: 2px solid $color-turquoise;
+    margin-bottom: 10px;
+    @include radius(40px);
+    font-weight: bold;
+    text-transform: uppercase;
+    @include shadow(0px, 2px, 0px, #dcdcdc);
+
+    position: relative;
+    //width: 100%;
+    width: auto;
+
+    &.full-width {
+      width: 100%;
+    }
+
+    @media (min-width: $screen-md) {
+      width: auto;
+    }
+    //font-size: 14px;
+    //font-weight: bold;
+    i:before {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+    }
+    &.btn-brand {
+      i:before {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+      }
+    }
+
+    &.btn-brand {
+      background-color: transparent;
+      color: $color-turquoise;
+      border: 2px solid $color-turquoise;
+      color: #99a2ab;
+      border: 1px solid #d5dce3;
+      @media (max-width: $screen-md) {
+        border: 2px solid $color-turquoise;
+      }
+    }
+
+    @media (max-width: $screen-md) {
+      &.btn-sml {
+        padding: 20px 27px 17px 22px; // padding: 20px 38px 17px 29px; //11px 26px 9px 20px;
+        // width: 100%;
+        &:before {
+          margin: 0px;
+        }
+      }
+      padding: 20px 28px 20px 16px;
+      i:before {
+        position: absolute;
+        right: 16px;
+        top: 24px;
+      }
+      &.btn-brand {
+        i:before {
+          position: absolute;
+          right: 16px;
+          top: 23px;
+        }
+      }
+    }
+
+    &.btn-xlrg {
+      text-transform: capitalize;
+      font-size: 30px;
+      padding: 10px 40px 10px 55px;
+      border-radius: 100px;
+      margin-top: 30px;
+    }
+
+    &.cta {
+      font-size: 10px;
+      margin-top: 4px;
+      //font-weight: bold;
+      line-height: 12px;
+      margin-left: 0px;
+      margin-top: 12px;
+
+      width: 100%;
+      font-size: 20px;
+      padding: 30px;
+
+      @media (min-width: $screen-md) {
+        width: auto;
+        font-size: 10px;
+        padding: 8px 14px 10px 14px;
+        padding-top: 9px;
+        margin-left: 10px;
+        margin-top: 4px;
+      }
+
+      &.alt {
+        // background-color: $color-gold;
+        // border-color: $color--white;
+        background: transparent;
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-header {
+    padding: 15px 15px 10px 15px;
+    h3 {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+
+  .modal-content {
+    border-radius: 0;
+  }
+
+  .modal-footer {
+    .footer-container {
+      // margin-top: -38px;
+      text-align: center;
+
+      .btn {
+        &.btn-default {
+          margin-left: 10px;
+          margin-bottom: 0px;
+          //float: right;
+        }
+      }
+    }
+  }
+}
+
+.list-inline {
+  margin-left: -5px;
+  margin-right: -5px;
+  padding-left: 0px;
+}

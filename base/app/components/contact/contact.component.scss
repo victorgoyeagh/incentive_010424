@@ -1,0 +1,10 @@
+@import "./../../../assets/sass/includes/breakpoints";
+
+.extra-padd {
+  background: url('/assets/images/default/bg-light-blue.png');
+
+  overflow: visible;
+  @media (min-width: $screen-md) {
+    padding-top: 80px;
+  }
+}

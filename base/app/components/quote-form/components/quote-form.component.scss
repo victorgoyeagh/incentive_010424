@@ -1,0 +1,44 @@
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+@import './../../../../assets/sass/includes/variables';
+
+/****
+label {
+    background-color: #ffffff85;
+    margin-bottom: -10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 0px 5px;
+    margin-left: 5px;
+}
+
+input[type="text"], input.text, textarea {
+  margin-top: -10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}*/
+/****/
+
+.bg {
+  background-image: url("./../../../../assets/images/default/cigna-global.original.jpg");
+  background-position: -20% 26%;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-color: #7da69e;
+}
+
+.checkboxlist {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+
+  &__item {
+        display: inline-block;
+        padding: 10px 10px;
+  }
+}
+
+.state label:after {
+    background-color: $color-turquoise;
+}

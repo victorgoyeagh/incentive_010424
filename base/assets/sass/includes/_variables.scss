@@ -1,0 +1,72 @@
+$header-height: 0px;//60px;
+$quote-form-margin: 20px;
+
+/** logos **/
+$logo--db: url('/assets/images/default/db-logo.svg');
+$logo--white: url('/assets/images/default/logo.png');
+$logo--black: url('/assets/images/default/logo-blk.png');
+$logo--blue: url('/assets/images/default/logo-blu.png');
+$logo--green: url('/assets/images/default/logo-grn.png');
+
+
+/* fonts */
+// $noto-serif-font: "Proxima_Nova_Alt_Rg"; //Poppins'; // //'lato'; //'Lato'; //'Ubuntu';
+// $roboto-font: 'Proxima_Nova_Rg';
+// $roboto-slab-font: 'Proxima_Nova_Th';
+// $font-san-serif: 'Proxima_Nova_Th';
+
+$noto-serif-font: "Ubuntu"; //Poppins'; // //'lato'; //'Lato'; //'Ubuntu';
+$roboto-font: 'Proxima_Nova_Rg';
+$roboto-slab-font: 'Proxima_Nova_Th';
+$font-san-serif: 'Proxima_Nova_Th';
+
+/* header sizes */
+
+$font__head--xs: 12px;
+$font__head--sm: 14px;
+$font__head--md: 24px;
+$font__head--lg: 28px;
+$font__head--xl: 40px;
+
+/* nav font weight */
+
+$nav__font-weight: 200;
+$nav__font-weight-alt: 100;
+
+/* content font sizes */
+
+$font--xs: 0.75;
+$font--sm: 0.85;
+$font--md: 0.95;
+$font--lg: 1.05;
+$font--xlg: 1.15;
+
+/* button fonts */
+
+$font__button--xs: 12px;
+$font__button--sm: 14px;
+$font__button--md: 24px;
+$font__button--lg: 34px;
+
+/* colors */
+$color-headers: #173b70;
+$color-banner-from:#2e4761; //lightslategray;
+$color-banner-to: #103860;
+$color__back--brown: #2d2c2f;
+$color__back--grey: #1c1c28;
+$color__back--red: #ef4822;
+$color--white: #ffffff;
+$color--blue-alpha: #001f42;//#2d2d42;// rgba(18, 18, 28, 1);
+$color--white-alpha: rgba(255,255,255,0.9);
+$color--grey: #34302d;
+$color--blue: #025aa5;
+$color--black: #000000;
+$color-grey--wash: rgba(0,0,0,0.3); 
+$color-grey--wash-alt:rgba(0,0,0,0.05);
+$color-reddish-grey--wash: #f5f5f5;
+$color-turquoise:#1fb6ff; // #00BCD4; //#00b4f0; // #6dd7e5; //#0cc; //#40e0d0;  //#00b4f0; //#00BCD4; #55a8fd;//#2ac37d;//#40e0d0;  
+$color-gold: #ffb42c;
+/* misc colors */
+
+$color--dark-grey: #34302d;
+$color--dark-grey--greyed-out: #8a8a8a;

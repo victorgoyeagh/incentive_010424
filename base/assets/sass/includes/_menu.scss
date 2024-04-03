@@ -1,0 +1,403 @@
+/** bootstrap override **/
+
+$nav-font: 400 inherit "Open Sans", Helvetica, Arial, sans-serif;
+$trans-speed: 0.2s;
+$trans-ease: ease-out;
+$trans-speed-alt: 0.3s;
+
+@mixin mainItemHover {
+  color: $color--black;
+  background-color: $color--white;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color: $color-turquoise;
+  border-bottom-width: 0;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: red;
+  transform: rotate(45 Deg);
+}
+
+.navbar {
+  margin: 0;
+  border: none;
+  z-index: 999;
+  position: initial;
+
+  @media (min-width: $screen-md) {
+    position: relative;
+  }
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    @media (min-width: $screen-md) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .navbar-header {
+    //background-color: $color--blue-alpha;
+    &.overlay {
+      // background-color: $color--blue-alpha;
+      //@media (max-width: $screen-lg) {
+      //border-bottom: 1px solid $color-reddish-grey--wash;
+      // background-color: $color--white-alpha !important;
+      .navbar-brand {
+        //background-image: url("/assets/images/default/logo-blk.png") !important;
+      }
+      //}
+    }
+
+    min-height: 74px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include transition(all, ease-out, $trans-speed);
+    @media (min-width: $screen-md) {
+      width: auto;
+      left: initial !important;
+      padding-left: 0px;
+    }
+
+    .navbar-toggle {
+      padding: 10px 10px;
+      position: relative;
+      display: block;
+      margin-right: 10px;
+      margin-top: 18px;
+      // background-color: $color-turquoise;
+      @include radius(40px);
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+
+      .icon-bar {
+        background: white;
+      }
+    }
+
+    .navbar-brand {
+      margin-left: 15px;
+      padding: 0px;
+      min-width: 120px;
+      width: auto;
+      display: inline-block;
+      position: relative;
+      top: 0px;
+      right: 0;
+      background-size: 86%;
+      background-position: 0 26px;
+      background-repeat: no-repeat;
+      background-image: $logo--white;
+      // background-image: $logo--black;
+
+      @media (min-width: $screen-md) {
+        top: 14px;
+        margin-left: 0px;
+        background-image: $logo--white;
+        // background-image: $logo--db;
+        // min-width: 180px;
+      }
+
+      img {
+        @include responsive-image;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .navbar-collapse {
+      &.collapse {
+        height: auto !important;
+      }
+    }
+  }
+  .navbar-collapse {
+    background: #1d1330; // #0d1e2f;
+
+    @media (min-width: $screen-md) {
+      background: transparent;
+      // background: #1d1330;
+    }
+    overflow: hidden;
+    overflow-y: auto !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    
+    @media (min-width: 768px) {
+      //height: auto !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $color-turquoise;
+    }
+
+    .logo-nav {
+      width: 100%;
+      height: 30px;
+      background-image: url("/assets/images/default/logo.png");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: contain;
+      max-width: 140px;
+      margin-left: 20px;
+      margin-top: 25px;
+      display: block;
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      overflow: hidden !important;
+    }
+
+    @media (max-width: $screen-md) {
+      // background-color: #141e30;
+      // border-left: 1px solid rgb(24, 38, 64);
+      //background-color: rgba(13, 20, 31, 1);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      // width: 90%;
+      z-index: 999;
+      margin: auto;
+      @include transition(left, ease-out, $trans-speed);
+    }
+
+    .navbar-nav {
+      padding: 30px 20px 0px 20px;
+      position: initial;
+      margin: 0px;
+      width: 100%;
+
+      @media (min-width: $screen-md) {
+        padding: 30px 0px 0px 20px;
+        width: auto;
+        // float: right !important;
+        float: left !important;
+        margin-left: 130px;
+      }
+
+      &.navbar-left {
+        float: left !important;
+      }
+
+      &.navbar-right {
+        float: right !important;
+        margin-left: 0px;
+        //padding-left: 0px;
+      }
+
+      .dropdown--fullwidth {
+        position: initial;
+      }
+
+      li {
+        width: 100%;
+        clear: both;
+        @media (min-width: $screen-md) {
+          width: auto;
+          clear: none;
+        }
+
+        a {
+          + p {
+            @media (min-width: $screen-md) {
+              // font-size: 14px;
+              line-height: normal;
+              margin-top: 0px;
+              padding: 0px;
+            }
+          }
+          font-family: $roboto-font;
+          background: transparent;
+          // border: 2px solid transparent;
+          font: $nav-font;
+          color: $color--white;
+          height: 40px;
+          z-index: 99;
+          //@include font-size(1.4);
+          @include radius(.5rem);
+          padding-left: 0px;
+          // border-bottom: 1px solid $nav-divider; //$color-turquoise;
+          padding: 30px 0px 50px 0px;
+          @include font-size(1.7);
+
+          @media (min-width: $screen-md) {
+            // color: $color--black;
+            @include font-size(1.4);
+            // font-weight: bold;
+            padding: 10px 15px;
+            border-bottom: 0px solid $color-turquoise;
+            padding-top: 11px;
+          }
+
+          &:hover {
+            @media (min-width: $screen-md) {
+              color: $color-turquoise;
+              //border-bottom: 2px solid $nav-divider; //$color-turquoise;
+              // color: $color--black;
+              // background-color: $color--white;
+              //border-color: $color-turquoise;
+            }
+          }
+        }
+
+        &.dropdown {
+          &:hover > a {
+            @media (min-width: $screen-md) {
+              @include mainItemHover;
+              background-image: linear-gradient(white, #efefef);
+            }
+          }
+
+          .dropdown-toggle {
+            @media (min-width: $screen-md) {
+              height: 50px;
+            }
+          }
+
+          &div.dropdown {
+
+            @include radius(.5rem);
+          }
+
+          &:hover > div.dropdown-menu {
+            @media (min-width: $screen-md) {
+              top: 70px;
+              @include radius(.5rem);
+              // border: 2px solid $color-turquoise;
+              @include show-object("top", 40px);
+            }
+          }
+
+          div.dropdown-menu {
+            border: 0px solid white;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            @include shadow(0, 2px, 6px, rgba(0, 0, 0, 0.05));
+            @media (min-width: $screen-md) {
+              position: absolute;
+              z-index: 9;
+              padding: 20px;
+              width: 100%;
+              content: "";
+              @include radius(.5rem);
+              background-color: #efefef;
+            }
+
+            @media (min-width: $screen-md) {
+              width: 100% !important;
+              top: 80px;
+            }
+
+            @media (min-width: $screen-md) {
+              width: auto;
+              @include hide-object();
+              display: block;
+              position: absolute;
+              @include transition(all, $trans-ease, $trans-speed);
+            }
+
+            .dropdown-cont {
+              padding: 0px;
+              @media (min-width: $screen-md) {
+                padding: 0 20px 0 15px;
+              }
+
+              h3 {
+                margin: initial;
+                padding-bottom: 0px;
+
+                @media (min-width: $screen-md) {
+                  margin: 20px 0;
+                  padding-bottom: 20px;
+                }
+              }
+
+              p {
+                color: $color--white;
+
+                @media (min-width: $screen-md) {
+                  color: $color--black;
+                }
+              }
+
+              ul {
+                padding: 0;
+
+                li {
+                  a {
+                    // font-weight: 600;
+                    height: auto;
+                    font: $nav-font;
+                    color: $color--white;
+                    border-width: 0;
+                    background: transparent;
+                    padding: 15px 0px;
+
+                    @media (min-width: $screen-md) {
+                      color: $color-headers;
+                      padding-top: 20px;
+                      padding-bottom: 0px;
+                      margin-bottom: 0px;
+                    }
+
+                    &:hover {
+                      color: $color-turquoise; //$color--black;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .dropdown .dropdown-menu {
+    background-color: transparent; // rgba(13, 20, 31, 1);
+    -webkit-transition: all $trans-speed-alt;
+    -moz-transition: all $trans-speed-alt;
+    -ms-transition: all $trans-speed-alt;
+    -o-transition: all $trans-speed-alt;
+    transition: all $trans-speed-alt;
+
+    max-height: 0px;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .dropdown.open .dropdown-menu {
+    /* For Bootstrap 4, use .dropdown.show instead of .dropdown.open */
+    max-height: initial;
+    opacity: 1;
+  }
+}

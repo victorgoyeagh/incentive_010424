@@ -1,0 +1,54 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+
+.modal-dialog {
+    margin: 0px auto !important;
+    width: 90%;
+    max-width: 900px;
+    max-height: 640px;
+    overflow: hidden;
+    @include radius(10px);
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        margin: 20px auto 0;
+    }
+
+    .modal-body {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .modal-container {
+        transition: 0.4s height ease-out;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}
+
+.scrollcontent {
+    // height: 510px;
+    // overflow: hidden;
+    // overflow-y: scroll;
+}
+#scrollpanel {
+    overflow: hidden;
+}
+.modal-content {
+    @include shadow(0, 0, 0, transparent);
+}
+.modal-body {
+    //padding: 0px;
+    //height: 510px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.modal-footer {
+    background: $color--white;
+    clear: both;
+    bottom: 0px;
+    position: absolute;
+    margin: 0 auto;
+    vertical-align: middle;
+    width: 100%;
+}

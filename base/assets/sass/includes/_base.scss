@@ -1,0 +1,317 @@
+//defaults
+
+$nav-divider: #244465; //#bdeae6;
+
+html,
+body {
+  //overflow-x: hidden;
+  //overflow-y: auto !important;
+  // background-color: #0d1e2f; // #263b52; //#101e27; //#1d3f56; // #0d141f;
+}
+
+body {
+  background: transparent;
+  font-family: 'Ubuntu'; //$noto-serif-font;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  background: $color--white;
+  // overflow-x: hidden;
+  * :not(h1, h2, h3, h4, h5, h6) {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  //font-weight: normal;
+  //color: $color-headers;
+  font-family: $noto-serif-font;
+}
+
+h1 {
+  // text-shadow: #122735 1px 1px 1px;
+  font-family: $noto-serif-font;
+}
+h2,
+h3,
+h4,
+p,
+ol,
+ul {
+  font-family: $noto-serif-font;
+}
+
+h2 {
+  font-size: 35px;
+  &.small {
+    font-size: 22px;
+  }
+  margin-top: 30px;
+  margin-bottom: 60px;
+
+  &.padd-alt {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+
+h3 {
+  font-size: 26px;
+  width: 100%;
+  float: left;
+  padding-bottom: 10px;
+  clear: both;
+  position: relative;
+  i {
+    margin-right: 10px;
+  }
+  span {
+    display: block;
+    width: 40px;
+    height: 2px;
+    bottom: 12px;
+    position: absolute;
+    background-color: $color-turquoise;
+    &.center {
+      left: 46%;
+      text-align: center;
+    }
+  }
+}
+
+h4 {
+  font-size: 22px;
+  &.intro-header {
+    font-size: 28px;
+    line-height: 36px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    max-width: 400px;
+    position: relative;
+
+    span {
+      display: block;
+      position: absolute;
+      left: 0px;
+      bottom: -10px;
+      width: 50px;
+      height: 1px;
+      background: $color-turquoise;
+    }
+  }
+}
+
+h5 {
+  display: block;
+  float: left;
+  font-family: $roboto-font, "Open Sans", sans-serif;
+
+  &.grey {
+    text-align: left;
+    color: #9e9e9e;
+    margin: 0px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    float: none;
+  }
+}
+
+input,
+label,
+p {
+  display: block;
+  font-weight: normal;
+}
+
+p,
+ol,
+ul {
+  font-family: $font-san-serif;
+  font-weight: 700;
+  line-height: 28px;
+
+  &.intro-text {
+    margin-top: 12px;
+    // font-size: 14px;
+  }
+}
+
+form {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin: 20px 0;
+
+  .form-control {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+.form-control {
+  border-radius: 0;
+  background: #f2f3f5;
+  border-width: 0px;
+}
+
+a {
+  color: $color--dark-grey--greyed-out;
+  text-decoration: none;
+
+  &:hover {
+    color: $color--dark-grey--greyed-out;
+  }
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+ol,
+p,
+ul {
+  li {
+    font-family: $font-san-serif;
+  }
+}
+
+button {
+  &.btn {
+    @include radius(0px);
+    text-transform: capitalize;
+
+    i:before {
+      margin: 0 0px !important;
+    }
+
+    &.icon {
+      padding: 6px 12px 6px 0;
+
+      .icon + .icon {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+table {
+  width: 100%;
+  color: grey;
+
+  tfoot,
+  thead {
+    display: inline-grid;
+  }
+
+  td,
+  th {
+    display: inline-grid;
+  }
+
+  & + & {
+    margin-bottom: 10px;
+  }
+}
+
+img {
+  &.responsive-img {
+    @include responsive-image;
+  }
+}
+
+hr {
+  width: 100%;
+  display: inline-block;
+  clear: both;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-top: 1px solid $nav-divider;
+
+  &.divider {
+    margin: 0 auto;
+    width: 100px;
+    clear: both;
+    height: 1px;
+    background: #efefef;
+    display: block;
+    border: 0px;
+  }
+}
+
+label {
+  display: inline-block;
+  // font-weight: 600;
+}
+
+.select {
+  position: relative;
+  z-index: 0;
+  -webkit-appearance: none;
+
+  &:after,
+  &:before {
+    content: "\232A";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    top: 32px;
+    right: 4px;
+    z-index: 1;
+    border-radius: 100%;
+    padding: 1px 3px 3px 7px;
+  }
+}
+
+textarea {
+  width: 100%;
+}
+
+input[type="range"] {
+  border: 0;
+  -webkit-appearance: none;
+  height: 4px;
+}
+
+input[type="text"],
+input.text,
+textarea {
+  border-radius: 5px !important;
+  padding: 20px 15px;
+}
+
+a,
+button {
+  display: block;
+}
+
+section {
+  z-index: 9;
+  display: block;
+  background-color: $color--white;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+  clear: both;
+  float: left;
+  width: 100%;
+}

@@ -8,17 +8,13 @@ import { Component, OnInit, ViewChild, ElementRef, AfterContentChecked } from '@
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, AfterContentChecked {
-    @ViewChild('header') header: ElementRef;
+  @ViewChild('header') header: ElementRef;
 
   constructor(
     private _communicationService: CommunicationService
   ) { }
 
-  ngOnInit() {    
-/*     setTimeout((e) => {
-      this.requestQuoteForm();
-    }, 1000); */
-  }
+  ngOnInit() {}
 
   public ngAfterContentChecked(): void {
 
@@ -27,23 +23,22 @@ export class HeaderComponent implements OnInit, AfterContentChecked {
   requestQuoteForm() {
 
     let modalInfo: ModalInfo = new ModalInfo(
-        `Request quote`,
-        ``,
-        ModalCommand.Open,
-        ModalType.Alert,
-        "OK",
-        "",
-        null,
-        ModalFormType.QuoteRequestForm,
-        "bookmarkModal",
-        {
-            Width: '100',
-            Height: '400'
-        },
-        ModalLocation.Center
+      `Request quote`,
+      ``,
+      ModalCommand.Open,
+      ModalType.Alert,
+      "OK",
+      "",
+      null,
+      ModalFormType.QuoteRequestForm,
+      "bookmarkModal",
+      {
+        Width: '100',
+        Height: '400'
+      },
+      ModalLocation.Center
     );
 
     this._communicationService.ShareModalInfoData(modalInfo);
-
-}
+  }
 }

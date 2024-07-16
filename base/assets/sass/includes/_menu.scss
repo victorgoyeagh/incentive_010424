@@ -243,11 +243,13 @@ $trans-speed-alt: 0.3s;
           padding: 30px 0px 50px 0px;
           @include font-size(1.7);
 
+          @media (min-width: $screen-lg) {
+            padding: 10px 14px;
+          }
+
           @media (min-width: $screen-md) {
-            // color: $color--black;
             @include font-size(1.4);
-            // font-weight: bold;
-            padding: 10px 15px;
+            padding: 10px 11px;
             border-bottom: 0px solid $color-turquoise;
             padding-top: 11px;
           }
@@ -255,10 +257,6 @@ $trans-speed-alt: 0.3s;
           &:hover {
             @media (min-width: $screen-md) {
               color: $color-turquoise;
-              //border-bottom: 2px solid $nav-divider; //$color-turquoise;
-              // color: $color--black;
-              // background-color: $color--white;
-              //border-color: $color-turquoise;
             }
           }
         }
@@ -286,7 +284,6 @@ $trans-speed-alt: 0.3s;
             @media (min-width: $screen-md) {
               top: 70px;
               @include radius(.5rem);
-              // border: 2px solid $color-turquoise;
               @include show-object("top", 40px);
             }
           }
@@ -351,7 +348,6 @@ $trans-speed-alt: 0.3s;
 
                 li {
                   a {
-                    // font-weight: 600;
                     height: auto;
                     font: $nav-font;
                     color: $color--white;
@@ -367,7 +363,7 @@ $trans-speed-alt: 0.3s;
                     }
 
                     &:hover {
-                      color: $color-turquoise; //$color--black;
+                      color: $color-turquoise;
                     }
                   }
                 }
@@ -382,7 +378,7 @@ $trans-speed-alt: 0.3s;
 
 @media (max-width: $screen-md) {
   .dropdown .dropdown-menu {
-    background-color: transparent; // rgba(13, 20, 31, 1);
+    background-color: transparent;
     -webkit-transition: all $trans-speed-alt;
     -moz-transition: all $trans-speed-alt;
     -ms-transition: all $trans-speed-alt;

@@ -47,8 +47,7 @@ $bubble-text-color: #466777;
         margin-left: 20px;
         margin-right: 20px;
 
-        @media (min-width: $screen-sm) {
-        }
+        @media (min-width: $screen-sm) {}
 
         .bubble {
           border: $bubble-border-width solid $color-turquoise;
@@ -505,7 +504,7 @@ $bubble-text-color: #466777;
       @media (min-width: $screen-md) {
         text-align: left;
         margin: 20px 0px;
-        font-size: 14px; // 1.4rem;
+        font-size: 14px;
         line-height: 26px !important;
         width: 90%;
       }
@@ -549,8 +548,7 @@ $bubble-text-color: #466777;
   left: 0px;
 
   &.overlay {
-    .navbar-brand {
-    }
+    .navbar-brand {}
   }
 
   @media (min-width: $screen-md) {
@@ -696,7 +694,7 @@ $bubble-text-color: #466777;
       z-index: 9999;
       overflow: initial;
 
-    /*.image {
+      /*.image {
         max-width: 400px;
         margin: auto;
         margin-left: -72px;
@@ -739,8 +737,7 @@ $bubble-text-color: #466777;
   padding-right: 0px;
   padding-left: 0px;
 
-  @media (min-width: $screen-sm) {
-  }
+  @media (min-width: $screen-sm) {}
 }
 
 .footer {

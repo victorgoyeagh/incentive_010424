@@ -38,6 +38,7 @@ $trans-speed-alt: 0.3s;
   .container {
     padding-right: 15px;
     padding-left: 15px;
+
     @media (min-width: $screen-md) {
       padding-right: 0;
       padding-left: 0;
@@ -45,16 +46,8 @@ $trans-speed-alt: 0.3s;
   }
 
   .navbar-header {
-    //background-color: $color--blue-alpha;
     &.overlay {
-      // background-color: $color--blue-alpha;
-      //@media (max-width: $screen-lg) {
-      //border-bottom: 1px solid $color-reddish-grey--wash;
-      // background-color: $color--white-alpha !important;
-      .navbar-brand {
-        //background-image: url("/assets/images/default/logo-blk.png") !important;
-      }
-      //}
+      .navbar-brand {}
     }
 
     min-height: 74px;
@@ -65,6 +58,7 @@ $trans-speed-alt: 0.3s;
     padding-left: 15px;
     padding-right: 15px;
     @include transition(all, ease-out, $trans-speed);
+
     @media (min-width: $screen-md) {
       width: auto;
       left: initial !important;
@@ -77,8 +71,8 @@ $trans-speed-alt: 0.3s;
       display: block;
       margin-right: 10px;
       margin-top: 18px;
-      // background-color: $color-turquoise;
       @include radius(40px);
+
       @media (min-width: $screen-md) {
         display: none;
       }
@@ -101,14 +95,11 @@ $trans-speed-alt: 0.3s;
       background-position: 0 26px;
       background-repeat: no-repeat;
       background-image: $logo--white;
-      // background-image: $logo--black;
 
       @media (min-width: $screen-md) {
         top: 14px;
         margin-left: 0px;
         background-image: $logo--white;
-        // background-image: $logo--db;
-        // min-width: 180px;
       }
 
       img {
@@ -124,21 +115,20 @@ $trans-speed-alt: 0.3s;
       }
     }
   }
+
   .navbar-collapse {
-    background: #1d1330; // #0d1e2f;
+    background: #1d1330;
 
     @media (min-width: $screen-md) {
       background: transparent;
-      // background: #1d1330;
     }
+
     overflow: hidden;
     overflow-y: auto !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
-    
-    @media (min-width: 768px) {
-      //height: auto !important;
-    }
+
+    @media (min-width: 768px) {}
 
     h1,
     h2,
@@ -171,14 +161,10 @@ $trans-speed-alt: 0.3s;
     }
 
     @media (max-width: $screen-md) {
-      // background-color: #141e30;
-      // border-left: 1px solid rgb(24, 38, 64);
-      //background-color: rgba(13, 20, 31, 1);
       display: block;
       position: absolute;
       top: 0;
       left: 100%;
-      // width: 90%;
       z-index: 999;
       margin: auto;
       @include transition(left, ease-out, $trans-speed);
@@ -193,7 +179,6 @@ $trans-speed-alt: 0.3s;
       @media (min-width: $screen-md) {
         padding: 30px 0px 0px 20px;
         width: auto;
-        // float: right !important;
         float: left !important;
         margin-left: 130px;
       }
@@ -205,7 +190,6 @@ $trans-speed-alt: 0.3s;
       &.navbar-right {
         float: right !important;
         margin-left: 0px;
-        //padding-left: 0px;
       }
 
       .dropdown--fullwidth {
@@ -215,31 +199,28 @@ $trans-speed-alt: 0.3s;
       li {
         width: 100%;
         clear: both;
+
         @media (min-width: $screen-md) {
           width: auto;
           clear: none;
         }
 
         a {
-          + p {
+          +p {
             @media (min-width: $screen-md) {
-              // font-size: 14px;
-              line-height: normal;
               margin-top: 0px;
               padding: 0px;
             }
           }
+
           font-family: $roboto-font;
           background: transparent;
-          // border: 2px solid transparent;
           font: $nav-font;
           color: $color--white;
           height: 40px;
           z-index: 99;
-          //@include font-size(1.4);
           @include radius(.5rem);
           padding-left: 0px;
-          // border-bottom: 1px solid $nav-divider; //$color-turquoise;
           padding: 30px 0px 50px 0px;
           @include font-size(1.7);
 
@@ -262,7 +243,7 @@ $trans-speed-alt: 0.3s;
         }
 
         &.dropdown {
-          &:hover > a {
+          &:hover>a {
             @media (min-width: $screen-md) {
               @include mainItemHover;
               background-image: linear-gradient(white, #efefef);
@@ -280,7 +261,7 @@ $trans-speed-alt: 0.3s;
             @include radius(.5rem);
           }
 
-          &:hover > div.dropdown-menu {
+          &:hover>div.dropdown-menu {
             @media (min-width: $screen-md) {
               top: 70px;
               @include radius(.5rem);
@@ -296,6 +277,7 @@ $trans-speed-alt: 0.3s;
             position: relative;
             overflow: hidden;
             @include shadow(0, 2px, 6px, rgba(0, 0, 0, 0.05));
+
             @media (min-width: $screen-md) {
               position: absolute;
               z-index: 9;
@@ -321,6 +303,7 @@ $trans-speed-alt: 0.3s;
 
             .dropdown-cont {
               padding: 0px;
+
               @media (min-width: $screen-md) {
                 padding: 0 20px 0 15px;
               }

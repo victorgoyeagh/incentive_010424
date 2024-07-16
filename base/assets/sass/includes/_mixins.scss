@@ -19,20 +19,21 @@
 }
 
 @mixin polygon($var_1, $var_2, $var_3, $var_4) {
-    -webkit-clip-path: polygon($var_1, $var_2, $var_3, $var_4) !important;
-    clip-path: polygon($var_1, $var_2, $var_3, $var_4) !important;
+  -webkit-clip-path: polygon($var_1, $var_2, $var_3, $var_4) !important;
+  clip-path: polygon($var_1, $var_2, $var_3, $var_4) !important;
 }
 
 @mixin masked-element($var) {
-  background: linear-gradient( 45deg, #992700 0%, #992700 28%, #c26100 58%, #a13100 100%);
+  background: linear-gradient(45deg, #992700 0%, #992700 28%, #c26100 58%, #a13100 100%);
   -webkit-text-fill-color: transparent;
+
   @if $var {
     -webkit-background-clip: text;
   }
 }
 
 @mixin greyscale($val) {
-  filter: url(  "data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
   /* Firefox 10+, Firefox on Android */
   filter: rgba(255, 255, 255, $val);
   /* IE6-9 */
@@ -45,12 +46,12 @@
   margin: 0;
 }
 
-@mixin top-btm-padding($valve1,$valve2) {
+@mixin top-btm-padding($valve1, $valve2) {
   padding-top: $valve1;
   padding-bottom: $valve2;
 }
 
-@mixin top-btm-margin($valve1,$valve2) {
+@mixin top-btm-margin($valve1, $valve2) {
   margin-top: $valve1;
   margin-bottom: $valve2;
 }
@@ -92,7 +93,7 @@
 @mixin opacity($value) {
   $IEValue: $value*100;
   opacity: $value;
-  -ms-filter:  "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" +$IEValue+")";
   filter: alpha(opacity=$IEValue);
 }
 
@@ -108,8 +109,8 @@
   -moz-box-shadow: $val1 $val2 $val3 $color;
   -webkit-box-shadow: $val1 $val2 $val3 $color;
   box-shadow: $val1 $val2 $val3 $color;
-  -ms-filter:  "progid:DXImageTransform.Microsoft.Shadow(Strength=$val1, Direction=135, Color='$color')";
-  filter:  "progid: DXImageTransform.Microsoft.Shadow(Strength=$val1, Direction=135, Color='$color')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=$val1, Direction=135, Color='$color')";
+  filter: "progid: DXImageTransform.Microsoft.Shadow(Strength=$val1, Direction=135, Color='$color')";
 }
 
 @mixin responsive-image {
@@ -132,7 +133,7 @@
   /* IE10+ */
   background: linear-gradient(to bottom, $from 0%, $to 100%);
   /* W3C */
-  filter:  "progid: DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to', GradientType=0)";
+  filter: "progid: DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to', GradientType=0)";
   /* IE6-9 */
 }
 
@@ -152,11 +153,9 @@
   visibility: visible;
   opacity: 1;
   -prefixes-transition-delay: 0s, 0s;
-  // background-color: $color-black-filled;
 }
 
 @mixin hide-object {
-  // background-color: $color-black-unfilled;
   visibility: hidden;
   opacity: 0;
   -prefixes-transition-property: opacity, visibility;
@@ -164,7 +163,7 @@
   -prefixes-transition-delay: 0s, .4s;
 }
 
-@mixin transition($prop,$effect,$speed) {
+@mixin transition($prop, $effect, $speed) {
   -webkit-transition: $prop $effect $speed;
   -moz-transition: $prop $effect $speed;
   -o-transition: $prop $effect $speed;
@@ -173,11 +172,11 @@
 
 @mixin brightness($amount) {
   -webkit-filter: brightness($amount);
-  filter: url(  "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='bright125'><feComponentTransfer><feFuncR type='linear' slope='1.25'/><feFuncG type='linear' slope='1.25' /><feFuncB type='linear' slope='1.25' /></feComponentTransfer></filter></svg>#bright125");
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='bright125'><feComponentTransfer><feFuncR type='linear' slope='1.25'/><feFuncG type='linear' slope='1.25' /><feFuncB type='linear' slope='1.25' /></feComponentTransfer></filter></svg>#bright125");
   filter: brightness($amount);
 }
 
-@mixin stroke ($color,$shadow-color,$stroke-color,$width) {
+@mixin stroke ($color, $shadow-color, $stroke-color, $width) {
   color: $color;
   text-shadow: -$width -$width 0 $shadow-color, $width -$width 0 $shadow-color, -$width $width 0 $shadow-color, $width $width 0 $shadow-color;
   -webkit-text-fill-color: $color;
